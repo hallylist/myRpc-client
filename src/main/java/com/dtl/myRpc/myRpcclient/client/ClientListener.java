@@ -44,8 +44,8 @@ public class ClientListener {
     public void start() {
         LOGGER.info("netty client start ...");
         this.bootstrap.group( worker)
-                .channel(NioSocketChannel.class)
-                .option(ChannelOption.SO_KEEPALIVE, true);
+                .channel(NioSocketChannel.class);
+//                .option(ChannelOption.SO_KEEPALIVE, true);
         try {
             //设置事件处理
             this.bootstrap.handler(new ChannelInitializer<SocketChannel>() {

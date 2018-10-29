@@ -1,6 +1,5 @@
 package com.dtl.myRpc.myRpcclient;
 
-import com.dtl.myRpc.myRpcclient.client.ClientConfiguration;
 import com.dtl.myRpc.myRpcclient.client.ClientListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -18,7 +17,7 @@ public class MyRpcClientApplication implements CommandLineRunner {
 	}
 
 	@Override
-	public void run(String... args) throws Exception {
+	public void run(String... args){
 		clientListener.start();
 	}
 }
